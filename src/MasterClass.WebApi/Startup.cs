@@ -27,7 +27,9 @@ namespace MasterClass.WebApi
         {
             services.AddControllers();
 
-            services.AddScoped<IApplicationRequestContext, ApplicationRequestContext>();
+            services.AddSingleton<IApplicationRequestContext, ApplicationRequestContext>();
+            services.AddSingleton<IApplicationRequestContext, ApplicationRequestContext>();
+            services.AddSingleton<IApplicationRequestContext, ApplicationRequestContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
